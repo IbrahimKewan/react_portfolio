@@ -33,7 +33,6 @@ const Header = () => {
 
             <button className="mode flex">
                 <span className="icon-moon-o"></span>
-                {/* <span className="icon-moon-o"></span> */}
             </button>
 
             {showModal && (
@@ -41,7 +40,7 @@ const Header = () => {
                     <ul className="modal">
                         <li>
                             <button
-                                className="icon-clear"
+                                className="icon-close"
                                 onClick={() => {
                                     setshowModal(false);
                                 }}
