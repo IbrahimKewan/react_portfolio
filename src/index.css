@@ -164,6 +164,15 @@ html {
     background-color: rgb(25, 118, 210);
 }
 
+@media (max-width: 1000px) {
+    .scroll2Top {
+        width: 2.2rem;
+        height: 2.2rem;
+        opacity: 0.6;
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 600px) {
     .container {
         width: 98%;

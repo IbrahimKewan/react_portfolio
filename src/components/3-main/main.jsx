@@ -12,7 +12,7 @@ const Main = () => {
                 <button>React</button>
             </section>
             <section className="  flex right-section">
-                {["aa", "b", "c", "d", "e", "f", "g"].map((item) => {
+                {["aa"].map((item) => {
                     return (
                         <article key={item} className="card">
                             <img
