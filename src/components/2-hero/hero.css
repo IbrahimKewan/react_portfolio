@@ -68,7 +68,7 @@ section.hero .all-icons .icon:hover {
 ====================================== */
 section.hero .animation {
     width: 100%;
-    translate: 100px 55px;
+    translate: (100px 55px);
 }
 
 @media (max-width: 1250px) {
