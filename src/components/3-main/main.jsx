@@ -7,17 +7,14 @@ const Main = () => {
     const [currentActive, setcurrentActive] = useState("all");
     const [arr, setArr] = useState(myProjects);
 
-    const handleClick = (buttonCategory) => {
-        setcurrentActive(buttonCategory);
-
+    const handleClick = (btnCategorie) => {
+        setcurrentActive(btnCategorie);
         const newArr = myProjects.filter((item) => {
-            const ZZZ = item.category.find((myItem) => {
-                return myItem === buttonCategory;
+            const findCat = item.category.find((item) => {
+                return item === btnCategorie;
             });
-
-            return ZZZ === buttonCategory;
+            return findCat === btnCategorie;
         });
-
         setArr(newArr);
     };
 
@@ -85,11 +82,7 @@ const Main = () => {
                                     <h1 className="title">
                                         {item.projectTitle}
                                     </h1>
-                                    <p className="sub-title">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        elit adipisicing . Ex tempore dolor in,
-                                        accusantium laudantium accusamus.
-                                    </p>
+                                    <p className="sub-title">{item.subTitle}</p>
 
                                     <div className="flex icons">
                                         <div
