@@ -1,5 +1,6 @@
 import Lottie from "lottie-react";
 import heroAnimation from "../../../src/animation/dev.json";
+import heroAnimation2 from "../../../src/animation/Coding.json";
 import { useRef } from "react";
 import "./hero.css";
 import { motion, scale } from "framer-motion";
@@ -50,7 +51,7 @@ const Hero = () => {
                         // https://lottiereact.com/
                         lottieRef.current.setSpeed(0.5);
                     }}
-                    animationData={heroAnimation}
+                    animationData={heroAnimation2}
                 />
             </div>
         </section>
