@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import Header from "./components/1-header/header";
 
@@ -7,10 +8,15 @@ import Contact from "./components/4-contact/contact";
 import Footer from "./components/5-footer/footer";
 
 // menu
-import AboutMeSection from "./components/1-header/menu/1-about/about";
-import Projects from "./components/1-header/menu/3-projekte/projekte";
-import ContactPage from "./components/1-header/menu/2-contact/contact";
-
+const AboutMeSection = React.lazy(() =>
+    import("./components/1-header/menu/1-about/about")
+);
+const ContactPage = React.lazy(() =>
+    import("./components/1-header/menu/2-contact/contact")
+);
+const Projects = React.lazy(() =>
+    import("./components/1-header/menu/3-projekte/projekte")
+);
 function App() {
     useEffect(() => {
         const handleScroll = () => {

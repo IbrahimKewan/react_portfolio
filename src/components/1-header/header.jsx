@@ -29,7 +29,7 @@ const Header = ({ setPage }) => {
                         <button
                             className="link-btn"
                             onClick={() => setPage("home")}>
-                            Home
+                            Startseite
                         </button>
                     </li>
                     <li>
@@ -50,7 +50,7 @@ const Header = ({ setPage }) => {
                         <button
                             className="link-btn"
                             onClick={() => setPage("contact")}>
-                            Contact
+                            Kontakt
                         </button>
                     </li>
                 </ul>
@@ -89,7 +89,7 @@ const Header = ({ setPage }) => {
                             <button
                                 className="link-btn"
                                 onClick={() => setPage("home")}>
-                                Home
+                                Startseite
                             </button>
                         </li>
                         <li>
