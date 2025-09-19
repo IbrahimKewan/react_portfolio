@@ -48,10 +48,10 @@ function App() {
                     <Main />
                     <div className="divider"></div>
                     <Contact />
-                    <div className="divider"></div>
-                    <Footer />
                 </>
             )}
+            <div className="divider"></div>
+            <Footer setPage={setPage} />
             <a
                 style={{ opacity: showScrollBtn ? 1 : 0, transition: "1s" }}
                 href="#up">

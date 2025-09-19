@@ -76,7 +76,12 @@ const Main = () => {
                                 }}
                                 key={item.imgPath}
                                 className="  card">
-                                <img width={266} src={item.imgPath} alt="" />
+                                <img
+                                    width={266}
+                                    src={item.imgPath}
+                                    alt=""
+                                    loading="lazy"
+                                />
 
                                 <div style={{ width: "266px" }} className="box">
                                     <h1 className="title">

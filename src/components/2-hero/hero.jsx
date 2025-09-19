@@ -1,7 +1,8 @@
-import Lottie from "lottie-react";
+import React from "react";
+const Lottie = React.lazy(() => import("lottie-react"));
 import heroAnimation from "../../../src/animation/dev.json";
-// import heroAnimation2 from "../../../src/animation/Coding.json";
 import { useRef } from "react";
+
 import "./hero.css";
 import { motion, scale } from "framer-motion";
 

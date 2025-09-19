@@ -1,5 +1,6 @@
 import { useForm, ValidationError } from "@formspree/react";
-import Lottie from "lottie-react";
+import React from "react";
+const Lottie = React.lazy(() => import("lottie-react"));
 import doneAnimation from "../../animation/done.json";
 import emailAnimation from "../../animation/Send Message.json";
 import "./contact.css";

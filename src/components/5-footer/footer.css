@@ -7,7 +7,7 @@ footer.flex ul {
     gap: 1rem;
 }
 
-footer.flex ul a {
+/* footer.flex ul a {
     color: var(--subtitle);
     font-size: 0.9rem;
     font-weight: 400;
@@ -17,6 +17,19 @@ footer.flex ul a:hover {
     color: var(--blue);
     font-size: 1rem;
     font-weight: 500;
+} */
+
+footer.flex ul button {
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 1.01rem;
+    font-weight: 500;
+}
+
+footer.flex ul button:hover {
+    color: var(--blue);
+    opacity: 1;
+    font-size: 1.07rem;
 }
 
 footer.flex p {

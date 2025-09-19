@@ -1,19 +1,35 @@
 import "./footer.css";
-const Footer = () => {
+const Footer = ({ setPage }) => {
     return (
         <footer className="flex">
             <ul className="flex">
                 <li>
-                    <a href="">About</a>
+                    <button
+                        className="link-btn"
+                        onClick={() => setPage("home")}>
+                        Startseite
+                    </button>
                 </li>
                 <li>
-                    <a href="">Porjekte</a>
+                    <button
+                        className="link-btn"
+                        onClick={() => setPage("about")}>
+                        Über mich
+                    </button>
                 </li>
                 <li>
-                    <a href="">Uses</a>
+                    <button
+                        className="link-btn"
+                        onClick={() => setPage("projects")}>
+                        Projekte
+                    </button>
                 </li>
                 <li>
-                    <a href="">TEST</a>
+                    <button
+                        className="link-btn"
+                        onClick={() => setPage("contact")}>
+                        Kontakt
+                    </button>
                 </li>
             </ul>
             <p>© 2025 All rights reserved.</p>
