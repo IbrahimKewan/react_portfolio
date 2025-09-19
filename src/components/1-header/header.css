@@ -39,6 +39,19 @@ header ul li a:hover {
     font-size: 0.9rem;
 }
 
+header ul li button {
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+header ul li button:hover {
+    color: var(--blue);
+    opacity: 1;
+    font-size: 0.9rem;
+}
+
 header button {
     font-size: 1.2rem;
 }

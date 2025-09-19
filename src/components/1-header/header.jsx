@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./header.css";
-const Header = () => {
+const Header = ({ setPage }) => {
     const [showModal, setshowModal] = useState(false);
     const [theme, setTheme] = useState(
         localStorage.getItem("currentMode") ?? "dark"
@@ -26,13 +26,32 @@ const Header = () => {
             <nav>
                 <ul className="flex">
                     <li>
-                        <a href="">About</a>
+                        <button
+                            className="link-btn"
+                            onClick={() => setPage("home")}>
+                            Home
+                        </button>
                     </li>
                     <li>
-                        <a href="">Project</a>
+                        <button
+                            className="link-btn"
+                            onClick={() => setPage("about")}>
+                            Über mich
+                        </button>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <button
+                            className="link-btn"
+                            onClick={() => setPage("projects")}>
+                            Projekte
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            className="link-btn"
+                            onClick={() => setPage("contact")}>
+                            Contact
+                        </button>
                     </li>
                     <li>
                         <a href="">test</a>
