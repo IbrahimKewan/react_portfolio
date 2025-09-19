@@ -53,12 +53,6 @@ const Header = ({ setPage }) => {
                             Contact
                         </button>
                     </li>
-                    <li>
-                        <a href="">test</a>
-                    </li>
-                    <li>
-                        <a href="">test</a>
-                    </li>
                 </ul>
             </nav>
 
@@ -77,7 +71,11 @@ const Header = ({ setPage }) => {
             </button>
 
             {showModal && (
-                <div className="fixed">
+                <div
+                    className="fixed"
+                    onClick={() => {
+                        setshowModal(false);
+                    }}>
                     <ul className="modal">
                         <li>
                             <button
@@ -88,19 +86,32 @@ const Header = ({ setPage }) => {
                             />
                         </li>
                         <li>
-                            <a href="">About</a>
+                            <button
+                                className="link-btn"
+                                onClick={() => setPage("home")}>
+                                Home
+                            </button>
                         </li>
                         <li>
-                            <a href="">Project</a>
+                            <button
+                                className="link-btn"
+                                onClick={() => setPage("about")}>
+                                Über mich
+                            </button>
                         </li>
                         <li>
-                            <a href="">Contact</a>
+                            <button
+                                className="link-btn"
+                                onClick={() => setPage("projects")}>
+                                Projekte
+                            </button>
                         </li>
                         <li>
-                            <a href="">test</a>
-                        </li>
-                        <li>
-                            <a href="">test</a>
+                            <button
+                                className="link-btn"
+                                onClick={() => setPage("contact")}>
+                                Contact
+                            </button>
                         </li>
                     </ul>
                 </div>

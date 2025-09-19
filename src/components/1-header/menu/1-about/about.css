@@ -1,0 +1,188 @@
+/* AboutMe – nutzt deine Variablen aus :root/.light */
+.about {
+    margin-top: 2rem;
+    border-radius: 20px;
+    padding: clamp(24px, 5vw, 56px) 0;
+    color: var(--title);
+    background: radial-gradient(
+            900px 400px at 10% -10%,
+            rgba(93, 188, 252, 0.1),
+            transparent 60%
+        ),
+        radial-gradient(
+            900px 400px at 90% 0%,
+            rgba(124, 77, 255, 0.12),
+            transparent 55%
+        );
+}
+
+.about__hero {
+    text-align: center;
+    margin: 8px auto 28px;
+    max-width: 900px;
+}
+.about__badge {
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(90deg, rgb(124, 77, 255), var(--blue));
+    border-radius: 999px;
+}
+.about__title {
+    margin: 12px 0 6px;
+    font-size: clamp(32px, 6vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--title);
+}
+.about__subtitle {
+    margin: 6px auto 0;
+    max-width: 760px;
+    color: var(--subtitle);
+    font-size: clamp(14px, 2.5vw, 18px);
+}
+
+/* Grid passt in deinen .container */
+.about__grid {
+    margin: 24px auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+@media (min-width: 820px) {
+    .about__grid {
+        grid-template-columns: repeat(12, 1fr);
+        gap: 18px;
+    }
+}
+
+/* Cards mit deinen Farben */
+.card {
+    background: var(--secondary);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: clamp(16px, 3vw, 22px);
+}
+.card__title {
+    margin: 0 0 10px;
+    font-size: clamp(18px, 3vw, 22px);
+    color: var(--title);
+}
+.card__text {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--subtitle);
+}
+.card--span2 {
+    grid-column: 1 / -1;
+}
+@media (min-width: 820px) {
+    .card {
+        grid-column: span 6;
+    }
+    .card--span2 {
+        grid-column: span 12;
+    }
+}
+
+/* Tags */
+.tags {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.tag {
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--title);
+}
+
+/* Projekte */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+@media (min-width: 720px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.project {
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform; /* micro-optimierung */
+}
+.project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+.project__pill {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgb(124, 77, 255), var(--blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.project__name {
+    margin: 6px 0 6px;
+    font-size: 18px;
+    color: var(--title);
+}
+.project__desc {
+    margin: 0;
+    color: var(--subtitle);
+}
+
+/* Buttons/Links lokal (globales all:unset für a/button umgehen) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    color: var(--title);
+    text-decoration: none;
+    transition: transform 0.15s ease, background 0.2s ease;
+}
+.btn:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.03);
+}
+.btn:active {
+    transform: translateY(0);
+}
+.btn--primary {
+    color: #fff;
+    border: none;
+    background: linear-gradient(90deg, rgb(124, 77, 255), var(--blue));
+}
+
+/* Button-ähnliche Links in Header */
+.linklike {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    color: inherit;
+}
+.linklike:hover {
+    opacity: 0.8;
+}
