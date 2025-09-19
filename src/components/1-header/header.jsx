@@ -110,7 +110,7 @@ const Header = ({ setPage }) => {
                             <button
                                 className="link-btn"
                                 onClick={() => setPage("contact")}>
-                                Contact
+                                Kontakt
                             </button>
                         </li>
                     </ul>
