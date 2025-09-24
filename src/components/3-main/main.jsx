@@ -76,12 +76,26 @@ const Main = () => {
                                 }}
                                 key={item.imgPath}
                                 className="  card">
-                                <img
-                                    width={266}
-                                    src={item.imgPath}
-                                    alt=""
-                                    loading="lazy"
-                                />
+                                <picture>
+                                    <source
+                                        srcSet={item.imgPath.replace(
+                                            /\.(jpg|jpeg|png)$/i,
+                                            ".webp"
+                                        )}
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        width={266}
+                                        height={180}
+                                        src={item.imgPath}
+                                        alt={item.projectTitle}
+                                        loading="lazy"
+                                        style={{
+                                            objectFit: "cover",
+                                            borderRadius: "8px 8px 0 0",
+                                        }}
+                                    />
+                                </picture>
 
                                 <div style={{ width: "266px" }} className="box">
                                     <h1 className="title">

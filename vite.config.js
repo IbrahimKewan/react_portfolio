@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import legacy from "@vitejs/plugin-legacy";
+import viteCompression from "vite-plugin-compression";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -8,6 +9,10 @@ export default defineConfig({
         react(),
         legacy({
             targets: ["defaults", "not IE 11"],
+        }),
+        viteCompression({
+            algorithm: "gzip",
+            ext: ".gz",
         }),
     ],
     build: {

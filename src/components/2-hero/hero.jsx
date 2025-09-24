@@ -12,18 +12,27 @@ const Hero = () => {
         <section className="hero flex">
             <div className="left-section">
                 <div className="parent-avatar flex">
-                    <motion.img
+                    <motion.picture
                         initial={{ transform: "scale(0)" }}
                         animate={{ transform: "scale(1.1)" }}
                         transition={{
                             damping: 6,
                             type: "spring",
                             stiffness: 100,
-                        }}
-                        src="../../../img/meinBild_2.jpg"
-                        className="avatar"
-                        alt=""
-                    />
+                        }}>
+                        <source
+                            srcSet="../../../img/meinBild_2.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            src="../../../img/meinBild_2.webp"
+                            className="avatar"
+                            alt="Ibrahim Kewan - Frontend & Backend Developer"
+                            width="88"
+                            height="88"
+                            loading="eager"
+                        />
+                    </motion.picture>
                     <div className="icon-verified"></div>
                 </div>
                 <motion.h1

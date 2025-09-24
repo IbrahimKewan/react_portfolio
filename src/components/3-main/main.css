@@ -60,6 +60,8 @@ main section.right-section.flex {
 }
 
 .card {
+    width: 266px;
+    overflow: hidden;
     box-shadow: -5px 10px 5px rgba(0, 0, 0, 0.16),
         -5px 10px 5px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(93, 188, 252, 0.3);
@@ -84,8 +86,13 @@ main section.right-section.flex {
     cursor: pointer;
 }
 
+.card picture,
 .card img {
-    border-radius: 5px;
+    border-radius: 8px 8px 0 0;
+    width: 266px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
 }
 
 .card .box {
