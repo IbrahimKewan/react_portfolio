@@ -44,8 +44,8 @@ function App() {
             ) : (
                 <>
                     <Hero />
-                    <div className="divider"></div>
-                    <Main />
+                    {/* <div className="divider"></div>
+                    <Main /> */}
                     <div className="divider"></div>
                     <Contact />
                 </>
